@@ -3,5 +3,6 @@
 *.log
 
 bin/daemon/*
+coverage/
 data/config.*
 node_modules/
