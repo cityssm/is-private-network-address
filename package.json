@@ -1,6 +1,6 @@
 {
   "name": "@cityssm/is-private-network-address",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Determines whether or not a network address is a private or internal.",
   "keywords": [
     "ip address",
