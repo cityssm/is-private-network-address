@@ -1,10 +1,11 @@
 # is-private-network-address
 
-Determines whether traffic is from a private or internal IP address.
+![npm (scoped)](https://img.shields.io/npm/v/@cityssm/is-private-network-address) [![Codacy grade](https://img.shields.io/codacy/grade/3a2855450b3948bd82880b84a90a9c7e)](https://app.codacy.com/gh/cityssm/is-private-network-address/dashboard) [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/cityssm/is-private-network-address)](https://codeclimate.com/github/cityssm/is-private-network-address) [![Code Climate coverage](https://img.shields.io/codeclimate/coverage/cityssm/is-private-network-address)](https://codeclimate.com/github/cityssm/is-private-network-address) [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cityssm/is-private-network-address)](https://app.snyk.io/org/cityssm/project/7566c7e3-b469-4dd6-820a-259c9d1789bf)
+
+Determines whether or not a network address is a private or internal.
 
 Supports all [Reserved IP Addresses](https://en.wikipedia.org/wiki/Reserved_IP_addresses)
 used for private networks.
-
 
 ## Installation
 

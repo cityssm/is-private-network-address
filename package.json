@@ -1,7 +1,17 @@
 {
   "name": "@cityssm/is-private-network-address",
   "version": "0.1.0",
-  "description": "Determines whether traffic is from a private or internal IP address.",
+  "description": "Determines whether or not a network address is a private or internal.",
+  "keywords": [
+    "ip address",
+    "ipv4",
+    "ipv6",
+    "local",
+    "private",
+    "network address",
+    "subnet",
+    "internet"
+  ],
   "type": "module",
   "exports": "./index.js",
   "engines": {
