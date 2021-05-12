@@ -36,9 +36,4 @@ console.log(isPrivate("10.0.100.100"));
 
 console.log(isPrivate("192.168.2.1"));
 // => true
-
-/* Works with Express Requests too! */
-
-console.log(isPrivate(request));
-// => true or false
 ```
