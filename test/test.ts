@@ -36,7 +36,8 @@ describe("isPrivate() with private addresses", () => {
     "172.23.45.45",
     "192.168.2.1",
     "fd05::45:",
-    "FD66:4502:19:"];
+    "FD66:4502:19:",
+    "::ffff:192.168.50.120"];
 
   for (const addr of addresses) {
 
