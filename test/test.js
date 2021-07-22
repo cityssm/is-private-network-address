@@ -1,6 +1,6 @@
 import assert from "assert";
 import { isLocal, isPrivate } from "../index.js";
-const addresses_local = ["localhost", "127.0.0.1", "::1"];
+const addresses_local = ["localhost", "127.0.0.1", "::1", "::ffff:127.0.0.1"];
 describe("isLocal() with local addresses", () => {
     for (const addr of addresses_local) {
         it("Returns true for \"" + addr + "\"", () => {
@@ -21,7 +21,7 @@ describe("isPrivate() with private addresses", () => {
         "172.23.45.45",
         "192.168.2.1",
         "fd05::45:",
-        "FD66:4502:19:",
+        "FC66:4502:19:",
         "::ffff:192.168.50.120"];
     for (const addr of addresses) {
         it("Returns true for " + addr, () => {

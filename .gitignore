@@ -1,8 +1,2 @@
-*.db
-*.db-journal
-*.log
-
-bin/daemon/*
 coverage/
-data/config.*
 node_modules/
