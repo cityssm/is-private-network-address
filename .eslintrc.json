@@ -18,7 +18,6 @@
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:node/recommended",
-    "plugin:promise/recommended",
     "plugin:unicorn/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -26,36 +25,6 @@
     "node/no-missing-import": "off",
     "unicorn/consistent-function-scoping": "warn",
     "unicorn/empty-brace-spaces": "off",
-    "unicorn/filename-case": [
-      "error", {
-        "case": "camelCase",
-        "ignore": [
-          "DB",
-          "URL"
-        ]
-      }
-    ],
-    "unicorn/prefer-node-protocol": "off",
-    "unicorn/prevent-abbreviations": [
-      "error", {
-        "replacements": {
-          "def": {
-            "definition": true
-          },
-          "ele": {
-            "element": true
-          },
-          "eles": {
-            "elements": true
-          },
-          "fns": {
-            "functions": true
-          },
-          "res": {
-            "result": false
-          }
-        }
-      }
-    ]
+    "unicorn/prefer-node-protocol": "off"
   }
 }

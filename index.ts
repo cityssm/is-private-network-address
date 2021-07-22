@@ -7,12 +7,12 @@ const localhost_node = "::ffff:127.0.0.1";
 
 // Private Network Ranges
 const range_v4_10 = /^(::ffff:)?10(\.\d{1,3}){3}$/;
-const range_v4_172 = /^(::ffff:)?172\.(1[6-9]|2[0-9]|3[0-1])(\.\d{1,3}){2}$/;
+const range_v4_172 = /^(::ffff:)?172\.(1[6-9]|2\d|3[01])(\.\d{1,3}){2}$/;
 const range_v4_192 = /^(::ffff:)?192\.168(\.\d{1,3}){2}$/;
-const range_v6_fc = /^f[cd][0-9a-f]{0,2}(:([0-9a-f]){0,4}){0,7}$/;
+const range_v6_fc = /^f[cd][\da-f]{0,2}(:([\da-f]){0,4}){0,7}$/;
 
 
-export const isLocal = (networkAddress: string) => {
+export const isLocal = (networkAddress: string): boolean => {
 
   switch (networkAddress.toLowerCase()) {
     case localhost:
@@ -26,7 +26,7 @@ export const isLocal = (networkAddress: string) => {
 };
 
 
-export const isPrivate = (networkAddress: string) => {
+export const isPrivate = (networkAddress: string): boolean => {
 
   const networkAddressLowerCase = networkAddress.toLowerCase();
 
