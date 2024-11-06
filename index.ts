@@ -9,9 +9,9 @@ export const localNetworkAddresses = new Set([
 ])
 
 /*
- * Private Network Ranges
+ * Private Network Address Ranges
  */
-export const privateNetworkRanges = [
+export const privateNetworkAddressRanges = [
   /^(::ffff:)?10(\.\d{1,3}){3}$/,
   /^(::ffff:)?172\.(1[6-9]|2\d|3[01])(\.\d{1,3}){2}$/,
   /^(::ffff:)?192\.168(\.\d{1,3}){2}$/,
@@ -39,8 +39,8 @@ export function isPrivate(networkAddress: string): boolean {
 
   const networkAddressLowerCase = networkAddress.toLowerCase()
 
-  for (const privateNetworkRange of privateNetworkRanges) {
-    if (privateNetworkRange.test(networkAddressLowerCase)) {
+  for (const privateNetworkAddressRange of privateNetworkAddressRanges) {
+    if (privateNetworkAddressRange.test(networkAddressLowerCase)) {
       return true
     }
   }

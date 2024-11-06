@@ -2,7 +2,7 @@
  * Local Network Addresses
  */
 export declare const localNetworkAddresses: Set<string>;
-export declare const privateNetworkRanges: RegExp[];
+export declare const privateNetworkAddressRanges: RegExp[];
 /**
  * Tests if a given network address is a local network address.
  * @param networkAddress - A network address string.
