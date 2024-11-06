@@ -33,11 +33,11 @@ export function isLocal(networkAddress: string): boolean {
  * @returns `true` if the network address string represents a private network address.
  */
 export function isPrivate(networkAddress: string): boolean {
-  const networkAddressLowerCase = networkAddress.toLowerCase()
-
   if (isLocal(networkAddress)) {
     return true
   }
+
+  const networkAddressLowerCase = networkAddress.toLowerCase()
 
   for (const privateNetworkRange of privateNetworkRanges) {
     if (privateNetworkRange.test(networkAddressLowerCase)) {
