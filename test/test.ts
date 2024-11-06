@@ -1,74 +1,57 @@
-import assert from "assert";
-import { isLocal, isPrivate } from "../index.js";
+import assert from 'node:assert'
+import { describe, it } from 'node:test'
 
+import { isLocal, isPrivate, localNetworkAddresses } from '../index.js'
 
-const addresses_local = ["localhost", "127.0.0.1", "::1", "::ffff:127.0.0.1"];
-
-
-describe("isLocal() with local addresses", () => {
-
-
-  for (const addr of addresses_local) {
-
-    it("Returns true for \"" + addr + "\"", () => {
-      assert.strictEqual(isLocal(addr), true);
-    });
+await describe('isLocal() with local addresses', async () => {
+  for (const addr of localNetworkAddresses) {
+    await it('Returns true for "' + addr + '"', () => {
+      assert.strictEqual(isLocal(addr), true)
+    })
   }
-});
+})
 
-
-describe("isLocal() with invalid addresses", () => {
-
-  const addresses = ["10.10.10.10", "c800::1"];
+await describe('isLocal() with invalid addresses', async () => {
+  const addresses = ['10.10.10.10', 'c800::1']
 
   for (const addr of addresses) {
-
-    it("Returns false for \"" + addr + "\"", () => {
-      assert.strictEqual(isLocal(addr), false);
-    });
+    await it('Returns false for "' + addr + '"', () => {
+      assert.strictEqual(isLocal(addr), false)
+    })
   }
-});
+})
 
-
-describe("isPrivate() with private addresses", () => {
-
-  const addresses = ["10.0.67.54",
-    "172.23.45.45",
-    "192.168.2.1",
-    "fd05::45:",
-    "FC66:4502:19:",
-    "::ffff:192.168.50.120"];
+await describe('isPrivate() with private addresses', async () => {
+  const addresses = [
+    '10.0.67.54',
+    '172.23.45.45',
+    '192.168.2.1',
+    'fd05::45:',
+    'FC66:4502:19:',
+    '::ffff:192.168.50.120'
+  ]
 
   for (const addr of addresses) {
-
-    it("Returns true for " + addr, () => {
-      assert.strictEqual(isPrivate(addr), true);
-    });
+    await it('Returns true for ' + addr, () => {
+      assert.strictEqual(isPrivate(addr), true)
+    })
   }
-});
+})
 
-
-describe("isPrivate() with local addresses", () => {
-
-  for (const addr of addresses_local) {
-
-    it("Returns true for " + addr, () => {
-      assert.strictEqual(isPrivate(addr), true);
-    });
+await describe('isPrivate() with local addresses', async () => {
+  for (const addr of localNetworkAddresses) {
+    await it('Returns true for ' + addr, () => {
+      assert.strictEqual(isPrivate(addr), true)
+    })
   }
-});
+})
 
-
-describe("isPrivate() with public addresses", () => {
-
-  const addresses = ["12.34.56.78",
-    "172.33.100.43",
-    "192.160.1.1"];
+await describe('isPrivate() with public addresses', async () => {
+  const addresses = ['12.34.56.78', '172.33.100.43', '192.160.1.1']
 
   for (const addr of addresses) {
-
-    it("Returns false for " + addr, () => {
-      assert.strictEqual(isPrivate(addr), false);
-    });
+    await it('Returns false for ' + addr, () => {
+      assert.strictEqual(isPrivate(addr), false)
+    })
   }
-});
+})
