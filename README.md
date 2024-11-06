@@ -3,6 +3,8 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@cityssm/is-private-network-address)](https://www.npmjs.com/package/@cityssm/is-private-network-address)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/cityssm/is-private-network-address)](https://codeclimate.com/github/cityssm/is-private-network-address)
 [![DeepSource](https://app.deepsource.com/gh/cityssm/is-private-network-address.svg/?label=active+issues&show_trend=true&token=Ig0hw1im4uCKenMzR6Serqdm)](https://app.deepsource.com/gh/cityssm/is-private-network-address/)
+[![codecov](https://codecov.io/gh/cityssm/is-private-network-address/graph/badge.svg?token=HK5N4A5N2F)](https://codecov.io/gh/cityssm/is-private-network-address)
+[![Coverage Testing](https://github.com/cityssm/is-private-network-address/actions/workflows/coverage.yml/badge.svg)](https://github.com/cityssm/is-private-network-address/actions/workflows/coverage.yml)
 
 Determines whether or not a network address is a private or internal.
 
@@ -11,7 +13,7 @@ used for private networks.
 
 ## Installation
 
-```bash
+```sh
 npm install @cityssm/is-private-network-address
 ```
 
