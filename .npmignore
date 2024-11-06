@@ -6,6 +6,7 @@ test
 
 .gitignore
 .npmignore
+.prettierignore
 
 eslint.config.*
 prettier.config.*
